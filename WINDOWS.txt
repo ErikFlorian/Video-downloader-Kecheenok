@@ -1,0 +1,14 @@
+KECHEENOK V3 — WINDOWS X64
+
+Extract the entire Kecheenok folder and run Kecheenok.exe.
+Keep the _internal folder beside the EXE; it contains the required libraries and tools.
+You do not need to install Python or any additional tools.
+
+Supported: Windows 10/11, 64-bit.
+
+Settings, history, and logs: %LOCALAPPDATA%\Kecheenok
+Update tools: Settings -> Repair / update tools
+
+If startup fails, a message will show the path to the diagnostic log.
+startup-test.json contains the result of the built-app check.
+_internal\tools\build-manifest.json contains the exact build tool versions.

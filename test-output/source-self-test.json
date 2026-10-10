@@ -1,0 +1,24 @@
+{
+  "platform": "linux",
+  "frozen": false,
+  "gui": true,
+  "tools": {
+    "yt-dlp": {
+      "ok": true,
+      "version": "2026.08.19"
+    },
+    "ffmpeg": {
+      "ok": true,
+      "version": "ffmpeg version n9.0.2 Copyright (c) 2000-2026 the FFmpeg developers"
+    },
+    "ffprobe": {
+      "ok": true,
+      "version": "ffprobe version n9.0.2 Copyright (c) 2007-2026 the FFmpeg developers"
+    },
+    "deno": {
+      "ok": true,
+      "version": "deno 2.9.7 (stable, release, x86_64-unknown-linux-gnu)"
+    }
+  },
+  "ok": true
+}

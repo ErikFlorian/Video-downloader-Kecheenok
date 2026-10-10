@@ -1,0 +1,37 @@
+Kecheenok v3 — third-party components
+
+Python — Python Software Foundation License
+https://www.python.org/psf/license/
+https://www.python.org/downloads/source/
+
+PySide6 / Qt — LGPL v3 / GPL v3 / commercial licenses, depending on module
+This app uses the dynamically linked Qt Core, GUI, Widgets and SVG modules.
+The onedir distribution keeps shared libraries separate so they can be replaced.
+License texts from the installed distributions are copied into licenses/ at build time.
+https://doc.qt.io/qtforpython-6/licenses.html
+https://code.qt.io/cgit/pyside/pyside-setup.git/
+https://download.qt.io/official_releases/qt/
+
+PyInstaller — GPL v2 or later with a bootloader exception
+https://pyinstaller.org/en/stable/license.html
+https://github.com/pyinstaller/pyinstaller
+
+yt-dlp — Unlicense; its official Windows binary contains GPL v3+ components
+https://github.com/yt-dlp/yt-dlp
+https://github.com/yt-dlp/yt-dlp/blob/master/THIRD_PARTY_LICENSES.txt
+https://github.com/yt-dlp/yt-dlp/blob/master/LICENSE
+
+FFmpeg — GPL v3+ for the GPL build distributed here
+Build source, scripts and configuration:
+https://github.com/yt-dlp/FFmpeg-Builds
+https://github.com/yt-dlp/FFmpeg-Builds/releases
+https://ffmpeg.org/legal.html
+https://github.com/FFmpeg/FFmpeg
+
+Deno — MIT; includes third-party components listed by its publisher
+https://github.com/denoland/deno/blob/main/LICENSE.md
+https://github.com/denoland/deno/blob/main/third_party/README.md
+https://github.com/denoland/deno/releases
+
+Runtimes are unmodified external programs invoked as subprocesses.
+Exact release URLs and archive hashes are recorded in tools/manifest.json.
