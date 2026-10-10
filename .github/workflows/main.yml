@@ -1,0 +1,53 @@
+
+name: Windows v3
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    tags: ["v3.*"]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: Build and test Windows app
+    runs-on: windows-latest
+    timeout-minutes: 45
+
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v7
+
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.13"
+          architecture: x64
+          cache: pip
+          cache-dependency-path: requirements-build.txt
+
+      - name: Install build dependencies
+        run: python -m pip install -r requirements-build.txt
+
+      - name: Build and verify Windows package
+        run: python scripts/build_windows.py
+
+      - name: Run tests
+        env:
+          QT_QPA_PLATFORM: offscreen
+        run: python -m unittest discover -s tests -v
+
+      - name: Upload Windows package
+        uses: actions/upload-artifact@v7
+        with:
+          name: Kecheenok-v3-windows-x64
+          path: |
+            dist/*.zip
+            dist/*.sha256
+            dist/windows-self-test.json
+          if-no-files-found: error
+          compression-level: 0
+          retention-days: 30
